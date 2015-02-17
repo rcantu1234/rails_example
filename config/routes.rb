@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :users do
+    resources :reminders
+  end
   get 'users/index'
 
   get 'users/show'
@@ -6,6 +10,7 @@ Rails.application.routes.draw do
   get 'users/edit'
 
   get 'users/new'
+
 
   root 'users#index'
 
