@@ -1,15 +1,27 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   resources :users do
     resources :reminders
   end
-  get 'users/index'
 
-  get 'users/show'
+  # get 'reminders/index'
 
-  get 'users/edit'
+  # get 'reminders/show'
 
-  get 'users/new'
+  # get 'reminders/edit'
+
+  # get 'reminders/new'
+
+
+  # get 'users/index'
+
+  # get 'users/show'
+
+  # get 'users/edit'
+
+  # get 'users/new'
 
 
   root 'users#index'
