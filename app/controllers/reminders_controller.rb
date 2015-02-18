@@ -20,7 +20,7 @@ class RemindersController < ApplicationController
 
     respond_to do |format|
       if @reminder.save
-        format.html { redirect_to @user_reminders(@user), notice: 'Reminder was successfully created.' }
+        format.html { redirect_to @reminder, notice: 'Reminder was successfully created.' }
         format.json { render :show, status: :created, location: @reminder }
       else
         format.html { render :new }
@@ -34,7 +34,7 @@ class RemindersController < ApplicationController
   def update
     respond_to do |format|
       if @reminder.update(reminder_params)
-        format.html { redirect_to @user_reminder_path(@user, @reminder), notice: 'Reminder was successfully updated.' }
+        format.html { redirect_to @reminder, notice: 'Reminder was successfully updated.' }
         format.json { render :show, status: :ok, location: @reminder }
       else
         format.html { render :edit }
