@@ -26,7 +26,7 @@
         <td><%= reminder.message %></td>
         <td><%= link_to 'Show', user_reminder_path(@user, reminder) %> | </td>
         <td><%= link_to 'Edit', edit_user_reminder_path(@user, reminder) %> | </td>
-        <td><%= link_to 'Destroy', user_reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

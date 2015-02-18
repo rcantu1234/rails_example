@@ -8,9 +8,12 @@
 </head>
 <body>
 
-<%= render 'shared/sign_in_sign_out' %>
 
 <div class='container'>
+  <div>
+   <%= link_to 'SIGN-OUT', destroy_user_session_path(@user), method: :delete %> |
+   <%= link_to "REPORTS", reports_path %>
+  </div>
 
  <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

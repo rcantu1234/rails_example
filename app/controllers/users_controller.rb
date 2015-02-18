@@ -17,7 +17,18 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-def create
+  def reports
+  end
+
+  def all_report
+    respond_to do |format|
+      format.csv do
+      render text: User.to_csv
+      end
+    end
+  end
+
+  def create
     @user = User.new(user_params)
 
     respond_to do |format|

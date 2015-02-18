@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+get 'users/reports', as: 'reports'
+get 'users/all_report', as: 'all_report'
   devise_for :users
 
   resources :users do
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   # get 'users/edit'
 
   # get 'users/new'
+
 
 
   root 'users#index'
