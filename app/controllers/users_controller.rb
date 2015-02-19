@@ -28,6 +28,17 @@ class UsersController < ApplicationController
     end
   end
 
+# respond_to do |format|
+#   format.csv do
+#     send_data User.to_csv, filename: 'users_report.csv', disposition: 'download'
+#   end
+#   format.html do
+#     render layout: false
+#   end
+  # format.pdf do
+  #   send_data PDFKit.new(all_report_url(format: 'html')), filename: 'all_report.pdf'
+  # end
+
   def create
     @user = User.new(user_params)
 
